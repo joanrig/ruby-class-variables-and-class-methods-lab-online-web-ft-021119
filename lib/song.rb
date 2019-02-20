@@ -8,7 +8,6 @@ class Song
   @@count = 0
 
   def initialize(name, artist, genre)
-
     @name = name
     @@count += 1
 
@@ -39,10 +38,10 @@ class Song
       if genre_count.keys.include?(genre)
         genre_count[genre] = genre_count[genre]+1
       else
-        genre_count[genre] = 1
+        genre_count[genre]
+      end
     end
     binding.pry
-    genre_count
   end
 
 

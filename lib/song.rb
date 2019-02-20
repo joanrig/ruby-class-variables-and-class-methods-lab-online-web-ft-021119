@@ -3,11 +3,11 @@ class Song
 
   #@@count = 0
   @@artists = []
-  @@genres_hash = {}
+  @@genres = []
 
   def initialize(name, artist, genre)
     @name = name
-    #@@count += 1
+    @@count += 1
 
     @artist = artist
     @@artists<< @artist

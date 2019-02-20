@@ -37,7 +37,7 @@ class Song
       if genre_count.keys.include?(genre)
         genre.value += 1
       else
-        genre_count[:genre]=1
+        genre_count[genre]=1
       end
     genre_count
     binding.pry

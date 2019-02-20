@@ -20,8 +20,7 @@ class Song
     if @@genres_hash.keys.include?(@genre)
       @@genres_hash[@genre] = @name
     else
-      new_hash = {@genre => @name}
-      @@genres_hash.merge(new_hash)
+      @@genres_hash[@genre] = @name
     end
   end
 

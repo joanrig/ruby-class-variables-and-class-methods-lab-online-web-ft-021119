@@ -5,7 +5,7 @@ class Song
   @@count = 0
   @@artists = []
   @@genres_hash = {}
-  genres_array = []
+  @genres_array = []
 
   def initialize(name, artist, genre)
     @name = name
@@ -15,7 +15,7 @@ class Song
     @@artists<< @artist
 
     @genre = genre
-    genres_array << @genre
+    @genres_array << @genre
 
     if @@genres_hash.keys.include?(@genre)
       @@genres_hash[@genre] = @name

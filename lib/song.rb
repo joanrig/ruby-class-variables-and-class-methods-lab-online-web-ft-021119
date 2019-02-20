@@ -13,7 +13,7 @@ class Song
     @@artists<< @artist
 
     @genre = genre
-    #@genres_array << @genre
+    @@genres << @genre
 
     # if @@genres_hash.keys.include?(@genre)
     #   @@genres_hash[@genre] = @name

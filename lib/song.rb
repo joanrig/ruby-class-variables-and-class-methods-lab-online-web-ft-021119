@@ -4,7 +4,6 @@ class Song
   #@@count = 0
   @@artists = []
   @@genres = []
-  @@genres_and_songs={}
 
   def initialize(name, artist, genre)
     @name = name
@@ -16,17 +15,6 @@ class Song
     @genre = genre
     @@genres << @genre
 
-    if @@genres_and_songs.keys.include?(@genre)
-      @@genres_and_songs[@genre]=name
-    else
-      @@genres_and_songs[:@genre]=name
-    end
-
-    # if @@genres_hash.keys.include?(@genre)
-    #   @@genres_hash[@genre] = @name
-    # else
-    #   @@genres_hash<< {:@genre => @name)
-    # end
   end
 
 
@@ -43,7 +31,15 @@ class Song
   end
 
   def self.genre_count
-    @@genres_and_songs
+    genre_count = {}
+    #@@genres = [pop, rap, rock, rap, pop]
+    @@genres.each do |genre|
+      if genre_count.keys.include?(genre)
+        genre.value += 1
+      else
+        genre_count[:genre]=1
+      end
+    genre_count
     #binding.pry
   end
 

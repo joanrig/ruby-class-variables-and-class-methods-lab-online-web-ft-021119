@@ -37,8 +37,8 @@ class Song
     #@@genres = [pop, rap, rock, rap, pop]
     #=> {pop => 2, rap => 2, rock => 1}
     @@genres.each do |genre|
-      if genre_count.has_key?(genre)
-        genre_count[genre] += 1
+      if genre_count.keys.include?(genre)
+        genre_count[genre] = genre_count[genre]+1
       else
         genre_count[genre] = 1
     end

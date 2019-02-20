@@ -35,16 +35,14 @@ class Song
     #@@genres = [pop, rap, rock, rap, pop]
     #=> {pop => 2, rap => 2, rock => 1}
     @@genres.each do |genre|
-      genre_count.each do |k,v|
-        if k = genre
-          v += 1
-        else
-          genre_count[k][v]= 1
-        end
+      if genre_count[genre]
+        genre_count[genre] += 1
+      else
+        genre_count[genre] = 1
       end
     end
     genre_count
-    binding.pry
+    #binding.pry
   end
 
 
